@@ -36,7 +36,10 @@ app.get("/", (req, res) => {
 app.use(errorHandler);
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     app.listen(process.env.PORT, () => {
       console.log(`Server listening on port`, process.env.PORT);
