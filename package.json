@@ -15,7 +15,7 @@
     "nodemon": "^3.0.1"
   },
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node Server.js"
   },
   "name": "backend",
   "description": "1: User authentication and authorization (admin functionality included)\r 2; Product listing\r 3: Cart fuctionality\r 4: Payment\r 5: Orders",
