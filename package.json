@@ -13,5 +13,24 @@
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.7",
     "nodemon": "^3.0.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "backend",
+  "description": "1: User authentication and authorization (admin functionality included)\r 2; Product listing\r 3: Cart fuctionality\r 4: Payment\r 5: Orders",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Demmy100/mern-shop-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Demmy100/mern-shop-backend/issues"
+  },
+  "homepage": "https://github.com/Demmy100/mern-shop-backend#readme"
 }
