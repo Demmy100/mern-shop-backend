@@ -12,18 +12,22 @@ const orderRoutes = require("./routes/orderRoute");
 const categoryRoutes = require("./routes/categoryRoute");
 const cookieParser = require("cookie-parser");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://127.0.0.1:5173", "http://127.0.0.1:5173"],
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
 
 app.use("/shop/users", userRoutes);
 app.use("/shop/products", productRoutes);
 app.use("/shop/payments", paymentRoutes);
 app.use("/shop/carts", cartRoutes);
 app.use("/shop/orders", orderRoutes);
-app.use("/shop/categories", categoryRoutes)
+app.use("/shop/categories", categoryRoutes);
 
 app.get("/", (req, res) => {
   res.send("Home Page");
